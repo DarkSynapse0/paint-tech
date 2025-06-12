@@ -1,9 +1,10 @@
+// ThemeProvider.tsx
 "use client";
-import {
+import React, {
   createContext,
+  useContext,
   useEffect,
   useState,
-  useContext,
   ReactNode,
 } from "react";
 
@@ -14,12 +15,10 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: "light",
-  setTheme: () => {
-    throw new Error("setTheme called outside ThemeProvider");
-  },
+  setTheme: () => {},
 });
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -31,6 +30,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       {children}
     </ThemeContext.Provider>
   );
-}
+};
 
 export const useTheme = () => useContext(ThemeContext);

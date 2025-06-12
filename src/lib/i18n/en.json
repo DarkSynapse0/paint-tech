@@ -1,5 +1,14 @@
 {
-  "tagline": "Excellence in Every Stroke",
-  "home": "Home",
-  "about": "AboutUs"
+  "greeting": "Hello",
+  "language": "English",
+  "switch_language": "Switch to Arabic"
 }
+style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          cursor: "pointer",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+        }} 
