@@ -83,7 +83,7 @@ const HomePage = () => {
                 <span>Our Products</span>
               </h1>
               <BlurText
-                text={`"Wide Range Of Products And Colors`}
+                text={`Wide Range Of Products And Colors`}
                 delay={150}
                 animateBy="words"
                 direction="top"
