@@ -1,9 +1,7 @@
 "use client";
-// import { useTranslation } from "react-i18next";
 import Carousel from "@/components/ui/Carousel";
 
 const HomePage = () => {
-  // const { t } = useTranslation();
 
   return (
     <>

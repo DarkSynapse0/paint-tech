@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={handleToggleLanguage}
-      className=" h-10 relative overflow-hidden px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+      className=" relative p-4 text-white bg-gray-200 rounded-lg cursor-pointer"
     >
       <AnimatePresence mode="wait">
         <motion.span
@@ -24,7 +24,9 @@ const LanguageSwitcher = () => {
           transition={{ duration: 0.3 }}
           className="absolute inset-0 flex items-center justify-center"
         >
-          {currentLanguage === "en" ? "En" : "Ar"}
+            {currentLanguage === "en" ? "🇺🇸" : "🇸🇦"}
+
+          {/* {currentLanguage === "en" ? "En" : "Ar"} */}
         </motion.span>
       </AnimatePresence>
     </button>

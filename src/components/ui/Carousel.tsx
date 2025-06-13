@@ -1,51 +1,25 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
+  const carouselData = t("carousel", { returnObjects: true }) as {
+    id: number;
+    content: string;
+    description: string;
+    link: string;
+    imgSrc: string;
+  }[];
 
-  const carouselData = [
-    {
-      id: 1,
-      content: "Transforming Walls with Premium Paint Solutions",
-      description:
-        "Discover premium paints that elevate your walls to new heights of beauty and durability.",
-      link: "https://example.com/paint-solutions",
-      imgSrc: "https://picsum.photos/id/1011/1200/800",
-    },
-    {
-      id: 2,
-      content: "Tools that Define Precision in Painting",
-      description:
-        "Explore the latest painting tools designed for flawless finishes and professional results.",
-      link: "https://example.com/painting-tools",
-      imgSrc: "https://picsum.photos/id/1025/1200/800",
-    },
-    {
-      id: 3,
-      content: "Innovative Color Applications for Modern Interiors",
-      description:
-        "Transform your space with cutting-edge color techniques tailored for contemporary living.",
-      link: "https://example.com/color-applications",
-      imgSrc: "https://picsum.photos/id/1031/1200/800",
-    },
-    {
-      id: 4,
-      content: "Industrial Strength Meets Decorative Excellence",
-      description:
-        "Combining durability with style for the toughest industrial and decorative painting needs.",
-      link: "https://example.com/industrial-paints",
-      imgSrc: "https://picsum.photos/id/1050/1200/800",
-    },
-  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const autoSlide = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselData.length);
     }, 5000);
-
     return () => clearInterval(autoSlide);
   }, [carouselData.length]);
 
@@ -60,7 +34,7 @@ const Carousel = () => {
   };
 
   const fadeVariant = {
-    initial: { opacity: 0.2 },
+    initial: { opacity: 0.4 },
     animate: {
       opacity: 1,
       transition: {
@@ -69,7 +43,7 @@ const Carousel = () => {
       },
     },
     exit: {
-      opacity: 0.2,
+      opacity: 0.4,
       transition: {
         duration: 1.2,
         ease: easeInOut,
@@ -96,8 +70,6 @@ const Carousel = () => {
       },
     },
   };
-
-
 
   return (
     <div className="relative max-w-screen min-h-screen overflow-hidden overflow-x-hidden">
@@ -144,7 +116,7 @@ const Carousel = () => {
             rel="noopener noreferrer"
             className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition sm:px-3 sm:py-1.5 xs:px-2 xs:py-1 xs:text-sm"
           >
-            Learn More
+            {t("button")}
           </a>
         </motion.div>
       </AnimatePresence>
