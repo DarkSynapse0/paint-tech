@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import Card from "@/components/ui/Card";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
 
 const HomePage = () => {
   const handleAnimationComplete = () => {
@@ -22,6 +24,9 @@ const HomePage = () => {
 
   return (
     <>
+    <div className="lg:hidden  fixed top-25 left-2 p-4 z-50">
+      <LanguageSwitcher />
+    </div>
       <div className=" relative overflow-hidden flex flex-col items-center justify-center ">
         <div>
           <Carousel />

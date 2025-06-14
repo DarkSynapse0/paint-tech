@@ -44,7 +44,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white fixed shadow-md w-full z-50">
+    <nav className="bg-white fixed shadow-md w-full z-100">
       <div className="mx-auto px-4 sm:px-6">
         <div className="w-full flex justify-between items-center py-5">
           <div className="gap-10 flex items-center justify-center">
@@ -258,10 +258,6 @@ export default function Navbar() {
             >
               <Mail className="w-4 h-4 mr-2" /> {navbar.contact}
             </a>
-
-            <div>
-              <LanguageSwitcher />
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
