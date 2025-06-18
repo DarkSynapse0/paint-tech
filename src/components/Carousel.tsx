@@ -13,28 +13,28 @@ const Carousel = () => {
       content: "Premium Interior Painting",
       description: "Transform your living spaces with our expert interior painting services using premium quality paints.",
       link: "/services",
-      imgSrc: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2358&q=80"
+      imgSrc: "./img8.jpg"
     },
     {
       id: 2,
       content: "Exterior Painting Excellence", 
       description: "Protect and beautify your property's exterior with weather-resistant paints and professional application.",
       link: "/services",
-      imgSrc: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+      imgSrc: "./img4.png"
     },
     {
       id: 3,
       content: "Industrial Coating Solutions",
       description: "Specialized industrial painting and coating services for commercial and industrial facilities.",
       link: "/services", 
-      imgSrc: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+      imgSrc: "./img16.jpg"
     },
     {
       id: 4,
       content: "Decorative & Artistic Finishes",
       description: "Add elegance with our decorative painting techniques and artistic wall finishes.",
       link: "/portfolio",
-      imgSrc: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+      imgSrc: "./img5.jpg"
     }
   ];
 

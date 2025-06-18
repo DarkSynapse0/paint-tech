@@ -19,7 +19,7 @@ const Services = () => {
       ],
       icon: "🏠",
       image:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3",
+        "./img8.jpg",
     },
     {
       category: "residential",
@@ -34,7 +34,7 @@ const Services = () => {
       ],
       icon: "🏢",
       image:
-        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
+        "./img4.png",
     },
     {
       category: "commercial",
@@ -49,7 +49,7 @@ const Services = () => {
       ],
       icon: "🏬",
       image:
-        "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3",
+        "./img6.jpg",
     },
     {
       category: "specialized",
@@ -64,7 +64,7 @@ const Services = () => {
       ],
       icon: "🎨",
       image:
-        "https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3",
+        "./img5.jpg",
     },
     {
       category: "industrial",
@@ -79,7 +79,7 @@ const Services = () => {
       ],
       icon: "🏭",
       image:
-        "https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3",
+        "./img16.jpg",
     },
     {
       category: "specialized",
@@ -94,23 +94,23 @@ const Services = () => {
       ],
       icon: "💧",
       image:
-        "https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3",
+        "./img7.jpg",
     },
-    {
-      category: "specialized",
-      title: "Wood Coating",
-      description:
-        "Specialized wood staining and coating services for all wood surfaces",
-      features: [
-        "Wood staining",
-        "Protective coating",
-        "UV protection",
-        "Natural finish",
-      ],
-      icon: "🪵",
-      image:
-        "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
-    },
+    // {
+    //   category: "specialized",
+    //   title: "Wood Coating",
+    //   description:
+    //     "Specialized wood staining and coating services for all wood surfaces",
+    //   features: [
+    //     "Wood staining",
+    //     "Protective coating",
+    //     "UV protection",
+    //     "Natural finish",
+    //   ],
+    //   icon: "🪵",
+    //   image:
+    //     "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
+    // },
     {
       category: "maintenance",
       title: "Maintenance Services",
@@ -124,7 +124,7 @@ const Services = () => {
       ],
       icon: "🔧",
       image:
-        "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3",
+        "./img17.jpg",
     },
   ];
 
@@ -250,30 +250,45 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="w-full grid grid-cols-1 items-center justify-center md:grid-cols-4 gap-10">
             {[
               {
                 step: "01",
-                title: "Consultation",
+                title: "Initial Consultation:",
                 desc: "Initial assessment and project planning",
               },
               {
                 step: "02",
-                title: "Preparation",
+                title: "Project Planning and Preparation",
                 desc: "Surface cleaning and preparation",
               },
               {
                 step: "03",
-                title: "Execution",
-                desc: "Professional painting with quality materials",
+                title: "Surface Preparation",
+                desc: "A thorough inspection of the surfaces to be painted is conducted to identify any repairs, cleaning, or preparation required.",
               },
               {
                 step: "04",
-                title: "Completion",
-                desc: "Final inspection and client approval",
+                title: "Painting and Coating Application",
+                desc: "A high-quality primer is applied to prepared surfaces to enhance adhesion and promote uniformity of the topcoat.",
+              },
+              {
+                step: "05",
+                title: "Final Inspection and Touch-Ups",
+                desc: "Once painting is complete, a final inspection is conducted to assess the quality of workmanship, color consistency, and overall finish.",
+              },
+              {
+                step: "06",
+                title: "Client Walkthrough and Approval",
+                desc: "The client is invited to walkthrough the completed project with a Paint Tech Contracting representative to review the work and address any questions or concerns.",
+              },
+              {
+                step: "07",
+                title: "Post-Project Follow-U",
+                desc: "Paint Tech Contracting seeks feedback from the client regarding their experience with the project, addressing any feedback or suggestions for improvement.",
               },
             ].map((item, index) => (
-              <div key={index} className="text-center group relative">
+              <div key={index} className="h-[250px] rounded-xl text-center group relative">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-lg font-bold text-white">
                     {item.step}
