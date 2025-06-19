@@ -7,7 +7,6 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Services from "./Services";
 import Clients from "./Clients";
-import Partners from "./Partners";
 import Products from "./Products";
 import Contact from "./Contact";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -25,7 +24,6 @@ const Index = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/clients" element={<Clients />} />
-          <Route path="/partners" element={<Partners />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

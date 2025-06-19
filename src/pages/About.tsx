@@ -3,6 +3,16 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 const About = () => {
   const { t } = useLanguage();
+  const sisterCompanies = [
+    {
+      name: "Synagratic",
+      description:
+        "A dynamic company dedicated to delivering innovative solutions across various industries, including the IT sector.",
+      url: "https://Synagratic.com",
+      logo: "https://synagratic.com/uploads/sitesetting/1210f08c26ef02626fcab55b15be4dd8.png", // Put the logo in public/logos/
+    },
+  ];
+
 
   return (
     <div className="pt-16 min-h-screen">
@@ -235,6 +245,43 @@ const About = () => {
                 </h3>
                 <p className="text-gray-400">{item.desc}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Sister Concern Companies
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Discover our group companies that share the same commitment to
+              quality and professionalism.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sisterCompanies.map((company, index) => (
+              <a
+                key={index}
+                href={company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 hover:bg-gray-600 transition-all p-6 rounded-xl text-center group"
+              >
+                <div className="w-20 h-20 mx-auto mb-4">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="w-full h-full object-contain rounded"
+                  />
+                </div>
+                <h3 className="text-white text-xl font-semibold group-hover:text-orange-400 mb-2">
+                  {company.name}
+                </h3>
+                <p className="text-gray-400">{company.description}</p>
+              </a>
             ))}
           </div>
         </div>

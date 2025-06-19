@@ -237,13 +237,7 @@ const Contact = () => {
                     <div>
                       <h4 className="text-white font-semibold">Email</h4>
                       <p className="text-gray-400">
-                        info@painttechcontracting.com
-                      </p>
-                      <p className="text-gray-400">
-                        sales@painttechcontracting.com
-                      </p>
-                      <p className="text-gray-400">
-                        accounts@painttechcontracting
+                        painttech.contracting@gmail.com
                       </p>
                     </div>
                   </div>

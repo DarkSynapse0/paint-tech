@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const { t } = useLanguage();
@@ -216,12 +217,12 @@ const Products = () => {
                   </div>
 
                   <div className="flex space-x-2">
-                    <button className="flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 text-sm">
+                    <Link to={"/contact"} className=" text-center flex-1 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 text-sm">
                       Get Quote
-                    </button>
-                    <button className="flex-1 border border-orange-500 text-orange-400 font-semibold py-2 px-4 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300 text-sm">
+                    </Link>
+                    {/* <button className="flex-1 border border-orange-500 text-orange-400 font-semibold py-2 px-4 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300 text-sm">
                       More Info
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

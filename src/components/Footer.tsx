@@ -37,13 +37,7 @@ const Footer = () => {
               </p>
               <p className="text-gray-400 flex items-center">📞 77525388</p>
               <p className="text-gray-400 flex items-center">
-                ✉️ info@painttechcontracting.com
-              </p>
-              <p className="text-gray-400 flex items-center">
-                ✉️ sales@painttechcontracting.com
-              </p>
-              <p className="text-gray-400 flex items-center">
-                ✉️ accounts@painttechcontracting
+                ✉️ painttech.contracting@gmail.com
               </p>
             </div>
           </div>

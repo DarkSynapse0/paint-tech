@@ -166,26 +166,6 @@ const Portfolio = () => {
     { id: "industrial", name: "Industrial" },
   ];
 
-  const portfolioJobs = [
-    "Al Jazi Real Estate",
-    "Al Faisal Holding",
-    "Al Samriya Village",
-    "Lagoona Compound",
-    "Man Enterprises",
-    "Viva 14 & Vila 15",
-    "QIMPCO International",
-    "Al Egla Garden",
-    "Mirage International",
-    "Al Forosia Garden",
-    "Doha British School",
-    "Aqwa Housing Complex",
-    "Zad Holding Company",
-    "Gulf United Cascade - 1 & 2 Garden",
-    "Gulf United - Sapphire",
-    "Gulf United - Ruby",
-    "Gulf United - Diamond",
-  ];
-
   const filteredProjects =
     selectedCategory === "all"
       ? projects
@@ -268,24 +248,6 @@ const Portfolio = () => {
                 </div> */}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="p-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-          <h2 className="text-5xl font-bold mb-10">Our Clients</h2>
-          <div className=" w-full flex items-start justify-start">
-            <ul className="w-full flex items-center justify-center flex-wrap gap-8">
-              {portfolioJobs.map((job, index) => (
-                <li
-                  key={index}
-                  className="text-center flex-grow text-lg bg-gray-800 p-5 rounded-xl hover:scale-105 text-gray-400 transition-all"
-                >
-                  {job}
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
