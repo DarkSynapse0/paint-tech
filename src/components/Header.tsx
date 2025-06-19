@@ -63,7 +63,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-20 h-20 flex items-center justify-center">
+            <div className=" bg-white rounded-xl p-1 w-12 h-12 flex items-center justify-center">
               <img
                 src="/PTC.svg"
                 alt="Paint Tech Logo"

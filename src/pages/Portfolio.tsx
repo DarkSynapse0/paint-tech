@@ -1,72 +1,195 @@
-
-import { useState } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Portfolio = () => {
   const { t } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const projects = [
     {
       id: 1,
-      title: 'Luxury Villa Interior',
-      category: 'residential',
-      location: 'Dubai Hills',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3',
-      description: 'Complete interior painting of a luxury villa with premium finishes'
+      title: "Luxury Villa Interior",
+      category: "residential",
+      location: "Dubai Hills",
+      image: "./img1.jpg",
+      description:
+        "Complete interior painting of a luxury villa with premium finishes",
     },
     {
       id: 2,
-      title: 'Commercial Office Building',
-      category: 'commercial',
-      location: 'Business Bay',
-      image: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?ixlib=rb-4.0.3',
-      description: 'Modern office building exterior and interior painting project'
+      title: "Commercial Office Building",
+      category: "commercial",
+      location: "Business Bay",
+      image: "./img2.jpg",
+      description:
+        "Modern office building exterior and interior painting project",
     },
     {
       id: 3,
-      title: 'Residential Complex',
-      category: 'residential',
-      location: 'JVC',
-      image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3',
-      description: 'Multi-building residential complex painting and maintenance'
+      title: "Residential Complex",
+      category: "residential",
+      location: "JVC",
+      image: "./img3.jpg",
+      description:
+        "Multi-building residential complex painting and maintenance",
     },
     {
       id: 4,
-      title: 'Industrial Facility',
-      category: 'industrial',
-      location: 'Jebel Ali',
-      image: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?ixlib=rb-4.0.3',
-      description: 'Heavy-duty industrial coating and protection systems'
+      title: "Industrial Facility",
+      category: "industrial",
+      location: "Jebel Ali",
+      image: "./img4.png",
+      description: "Heavy-duty industrial coating and protection systems",
     },
     {
       id: 5,
-      title: 'Hotel Renovation',
-      category: 'commercial',
-      location: 'Downtown Dubai',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3',
-      description: 'Complete hotel interior and exterior renovation project'
+      title: "Hotel Renovation",
+      category: "commercial",
+      location: "Downtown Dubai",
+      image: "./img5.jpg",
+      description: "Complete hotel interior and exterior renovation project",
     },
     {
       id: 6,
-      title: 'Private Residence',
-      category: 'residential',
-      location: 'Palm Jumeirah',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3',
-      description: 'Exclusive waterfront villa painting with decorative finishes'
-    }
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img6.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img7.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img8.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img9.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img10.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img11.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img12.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img13.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img14.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img15.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img16.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
+    {
+      id: 6,
+      title: "Private Residence",
+      category: "residential",
+      location: "Palm Jumeirah",
+      image: "./img7.jpg",
+      description:
+        "Exclusive waterfront villa painting with decorative finishes",
+    },
   ];
 
   const categories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'residential', name: 'Residential' },
-    { id: 'commercial', name: 'Commercial' },
-    { id: 'industrial', name: 'Industrial' }
+    { id: "all", name: "All Projects" },
+    { id: "residential", name: "Residential" },
+    { id: "commercial", name: "Commercial" },
+    { id: "industrial", name: "Industrial" },
   ];
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const portfolioJobs = [
+    "Al Jazi Real Estate",
+    "Al Faisal Holding",
+    "Al Samriya Village",
+    "Lagoona Compound",
+    "Man Enterprises",
+    "Viva 14 & Vila 15",
+    "QIMPCO International",
+    "Al Egla Garden",
+    "Mirage International",
+    "Al Forosia Garden",
+    "Doha British School",
+    "Aqwa Housing Complex",
+    "Zad Holding Company",
+    "Gulf United Cascade - 1 & 2 Garden",
+    "Gulf United - Sapphire",
+    "Gulf United - Ruby",
+    "Gulf United - Diamond",
+  ];
+
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="pt-16 min-h-screen">
@@ -78,7 +201,8 @@ const Portfolio = () => {
               Our Portfolio
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Showcasing our finest work across residential, commercial, and industrial projects in Dubai
+              Showcasing our finest work across residential, commercial, and
+              industrial projects in Quatar
             </p>
           </div>
         </div>
@@ -94,8 +218,8 @@ const Portfolio = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-orange-500 text-white shadow-lg'
-                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    ? "bg-orange-500 text-white shadow-lg"
+                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
                 }`}
               >
                 {category.name}
@@ -110,21 +234,25 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-750 transition-all duration-300 group">
+              <div
+                key={project.id}
+                className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-750 transition-all duration-300 group"
+              >
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
                   <div className="absolute top-4 right-4">
                     <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium capitalize">
                       {project.category}
                     </span>
-                  </div>
+                  </div>*/}
                 </div>
-                
+
+                {/*
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   <p className="text-orange-400 text-sm mb-3 flex items-center">
@@ -137,9 +265,24 @@ const Portfolio = () => {
                       View Details →
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="p-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <h2 className="text-5xl font-bold mb-10">Our Clients</h2>
+          <div className=" w-full flex items-start justify-start">
+            <ul className="w-full flex items-center justify-center flex-wrap gap-8">
+              {portfolioJobs.map((job, index) => (
+                <li key={index} className="text-center flex-grow text-lg bg-gray-800 p-5 rounded-xl hover:scale-105 text-gray-400 transition-all">
+                  {job}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -148,21 +291,25 @@ const Portfolio = () => {
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Project Statistics</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Project Statistics
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: '500+', label: 'Projects Completed', icon: '🏗️' },
-              { number: '15+', label: 'Years Experience', icon: '⏰' },
-              { number: '100%', label: 'Client Satisfaction', icon: '⭐' },
-              { number: '24/7', label: 'Support Available', icon: '📞' },
+              { number: "500+", label: "Projects Completed", icon: "🏗️" },
+              { number: "15+", label: "Years Experience", icon: "⏰" },
+              { number: "99.99%", label: "Client Satisfaction", icon: "⭐" },
+              { number: "24/7", label: "Support Available", icon: "📞" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-orange-400 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}

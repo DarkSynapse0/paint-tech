@@ -18,8 +18,7 @@ const Services = () => {
         "Color consultation",
       ],
       icon: "🏠",
-      image:
-        "./img8.jpg",
+      image: "./img8.jpg",
     },
     {
       category: "residential",
@@ -33,8 +32,7 @@ const Services = () => {
         "Multi-story capability",
       ],
       icon: "🏢",
-      image:
-        "./img4.png",
+      image: "./img4.png",
     },
     {
       category: "commercial",
@@ -48,8 +46,7 @@ const Services = () => {
         "Safety compliance",
       ],
       icon: "🏬",
-      image:
-        "./img6.jpg",
+      image: "./img6.jpg",
     },
     {
       category: "specialized",
@@ -63,8 +60,7 @@ const Services = () => {
         "Custom designs",
       ],
       icon: "🎨",
-      image:
-        "./img5.jpg",
+      image: "./img5.jpg",
     },
     {
       category: "industrial",
@@ -78,8 +74,7 @@ const Services = () => {
         "Safety compliance",
       ],
       icon: "🏭",
-      image:
-        "./img16.jpg",
+      image: "./img16.jpg",
     },
     {
       category: "specialized",
@@ -93,24 +88,8 @@ const Services = () => {
         "Various surfaces",
       ],
       icon: "💧",
-      image:
-        "./img7.jpg",
+      image: "./img7.jpg",
     },
-    // {
-    //   category: "specialized",
-    //   title: "Wood Coating",
-    //   description:
-    //     "Specialized wood staining and coating services for all wood surfaces",
-    //   features: [
-    //     "Wood staining",
-    //     "Protective coating",
-    //     "UV protection",
-    //     "Natural finish",
-    //   ],
-    //   icon: "🪵",
-    //   image:
-    //     "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
-    // },
     {
       category: "maintenance",
       title: "Maintenance Services",
@@ -123,8 +102,7 @@ const Services = () => {
         "Emergency repairs",
       ],
       icon: "🔧",
-      image:
-        "./img17.jpg",
+      image: "./img17.jpg",
     },
   ];
 
@@ -146,16 +124,14 @@ const Services = () => {
     <div className="pt-16 min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive painting and coating solutions for residential,
-              commercial, and industrial projects
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-orange-400 bg-clip-text text-transparent">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive painting and coating solutions for residential,
+            commercial, and industrial projects
+          </p>
         </div>
       </section>
 
@@ -182,79 +158,72 @@ const Services = () => {
 
       {/* Services Grid */}
       <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredServices.map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-750 transition-all duration-300 group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                  <div className="absolute top-4 left-4 text-4xl">
-                    {service.icon}
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-2">
-                    <h4 className="text-orange-400 font-semibold">
-                      Key Features:
-                    </h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className="text-gray-400 flex items-center"
-                        >
-                          <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-6">
-                    <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
-                      Get Quote
-                    </button>
-                  </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {filteredServices.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 rounded-xl overflow-hidden hover:bg-gray-750 transition-all duration-300 group"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+                <div className="absolute top-4 left-4 text-4xl">
+                  {service.icon}
                 </div>
               </div>
-            ))}
-          </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="space-y-2">
+                  <h4 className="text-orange-400 font-semibold">
+                    Key Features:
+                  </h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-gray-400 flex items-center"
+                      >
+                        <span className="w-2 h-2 bg-orange-400 rounded-full mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-6">
+                  <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
+                    Get Quote
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Process Section */}
       <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Process
-            </h2>
-            <p className="text-gray-400 text-lg">
-              How we deliver exceptional results
-            </p>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Our Process
+          </h2>
+          <p className="text-gray-400 text-lg mb-16">
+            How we deliver exceptional results
+          </p>
 
-          <div className="w-full grid grid-cols-1 items-center justify-center md:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center items-center justify-center">
             {[
               {
                 step: "01",
-                title: "Initial Consultation:",
+                title: "Initial Consultation",
                 desc: "Initial assessment and project planning",
               },
               {
@@ -265,40 +234,61 @@ const Services = () => {
               {
                 step: "03",
                 title: "Surface Preparation",
-                desc: "A thorough inspection of the surfaces to be painted is conducted to identify any repairs, cleaning, or preparation required.",
+                desc: "Inspection of surfaces and preparation for painting",
               },
               {
                 step: "04",
                 title: "Painting and Coating Application",
-                desc: "A high-quality primer is applied to prepared surfaces to enhance adhesion and promote uniformity of the topcoat.",
+                desc: "Applying primer and topcoat for finish and protection",
               },
               {
                 step: "05",
                 title: "Final Inspection and Touch-Ups",
-                desc: "Once painting is complete, a final inspection is conducted to assess the quality of workmanship, color consistency, and overall finish.",
+                desc: "Final inspection for quality and consistency",
               },
               {
                 step: "06",
                 title: "Client Walkthrough and Approval",
-                desc: "The client is invited to walkthrough the completed project with a Paint Tech Contracting representative to review the work and address any questions or concerns.",
+                desc: "Walkthrough with client and feedback collection",
               },
               {
                 step: "07",
-                title: "Post-Project Follow-U",
-                desc: "Paint Tech Contracting seeks feedback from the client regarding their experience with the project, addressing any feedback or suggestions for improvement.",
+                title: "Post-Project Follow-Up",
+                desc: "Feedback review and client satisfaction check",
               },
-            ].map((item, index) => (
-              <div key={index} className="h-[250px] rounded-xl text-center group relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+            ].map((item, index, arr) => (
+              <div key={index} className=" flex flex-col justify-center items-center relative">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex-wrap flex items-center justify-center mb-4">
                   <span className="text-lg font-bold text-white">
                     {item.step}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <div>
+
+                <h3 className="text-white text-lg font-semibold text-center mb-1">
                   {item.title}
                 </h3>
-                <p className="text-gray-400">{item.desc}</p>
-                {/* No more overflow */}
+                <p className="text-gray-400 text-center text-sm">{item.desc}</p>
+                </div>
+
+                {/* Arrow (right) */}
+                {index < arr.length - 1 && (
+                  <div className="hidden md:block absolute right-[-24px] top-[32px]">
+                    <svg
+                      className="w-6 h-6 text-orange-400"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                )}
               </div>
             ))}
           </div>

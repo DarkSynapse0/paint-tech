@@ -59,7 +59,7 @@ const Clients = () => {
         </div>
       </section>
 
-      {/* Client Logos */}
+      {/* Client Logos
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -79,7 +79,7 @@ const Clients = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
