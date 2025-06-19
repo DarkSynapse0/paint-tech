@@ -160,9 +160,9 @@ const Home = () => {
       </motion.section>
 
       {/* FAQ Section */}
-      <motion.section className="py-20 bg-gray-900 border-t border-gray-800" {...fadeInUp}>
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-16" {...fadeInUp}>
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Frequently Asked Questions
             </h2>
@@ -170,70 +170,49 @@ const Home = () => {
               Got questions? We’ve got answers to the most common inquiries
               about our painting services.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
-            {faqs.map((faq, index) => {
-              const isActive = activeIndex === index;
-              return (
-                <motion.div
-                  key={index}
-                  layout
-                  className="bg-gray-800 rounded-xl overflow-hidden"
-                  initial={false}
-                  animate={{
-                    backgroundColor: isActive ? "#374151" : "#1f2937",
-                  }} // gray-700 / gray-800
-                  transition={{ duration: 0.3 }}
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gray-800 rounded-xl overflow-hidden transition-all duration-300"
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full text-left px-6 py-4 flex items-center justify-between focus:outline-none group"
                 >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full text-left px-6 py-4 flex items-center justify-between group hover:bg-gray-700"
+                  <span className="text-orange-400 text-lg font-semibold">
+                    {faq.question}
+                  </span>
+                  <svg
+                    className={`w-5 h-5 text-orange-400 transition-transform duration-300 ${
+                      activeIndex === index ? "rotate-180" : "rotate-0"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <span className="text-orange-400 text-lg font-semibold">
-                      {faq.question}
-                    </span>
-                    <svg
-                      className={`w-5 h-5 text-orange-400 transition-transform duration-300 ${
-                        isActive ? "rotate-180" : "rotate-0"
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-
-                  <AnimatePresence initial={false}>
-                    {isActive && (
-                      <motion.div
-                        key="answer"
-                        initial="collapsed"
-                        animate="open"
-                        exit="collapsed"
-                        variants={{
-                          open: { opacity: 1, height: "auto" },
-                          collapsed: { opacity: 0, height: 0 },
-                        }}
-                        transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-                        className="px-6 pb-4 text-gray-300 transition-all"
-                      >
-                        {faq.answer}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className={`px-6 pb-4 text-gray-300 transition-all duration-300 ${
+                    activeIndex === index ? "block border-t p-2 border-gray-700" : "hidden"
+                  }`}
+                >
+                  {faq.answer}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 };
