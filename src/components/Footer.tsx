@@ -28,16 +28,14 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Professional painting and coating solutions in Dubai. Transforming
+              Professional painting and coating solutions in Qatar. Transforming
               spaces with quality, reliability, and expertise since 2008.
             </p>
             <div className="space-y-2">
               <p className="text-gray-400 flex items-center">
                 📍 Gulf Business Building D-Ring Road, Doha, Qatar
               </p>
-              <p className="text-gray-400 flex items-center">
-                📞 +974-40083727
-              </p>
+              <p className="text-gray-400 flex items-center">📞 77525388</p>
               <p className="text-gray-400 flex items-center">
                 ✉️ info@painttechcontracting.com
               </p>

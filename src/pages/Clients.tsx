@@ -1,46 +1,45 @@
-
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Clients = () => {
   const { t } = useLanguage();
 
   const clients = [
-    { name: 'Emirates Group', logo: '🏢', sector: 'Aviation' },
-    { name: 'DAMAC Properties', logo: '🏗️', sector: 'Real Estate' },
-    { name: 'Emaar Properties', logo: '🌟', sector: 'Development' },
-    { name: 'Dubai Municipality', logo: '🏛️', sector: 'Government' },
-    { name: 'Jumeirah Hotels', logo: '🏨', sector: 'Hospitality' },
-    { name: 'DP World', logo: '🚢', sector: 'Logistics' },
-    { name: 'Dubai Airports', logo: '✈️', sector: 'Aviation' },
-    { name: 'DEWA', logo: '⚡', sector: 'Utilities' },
-    { name: 'Dubai Health Authority', logo: '🏥', sector: 'Healthcare' },
-    { name: 'Nakheel Properties', logo: '🌴', sector: 'Real Estate' },
-    { name: 'Dubai Metro', logo: '🚇', sector: 'Transportation' },
-    { name: 'Mall of Emirates', logo: '🛍️', sector: 'Retail' },
+    { name: "Emirates Group", logo: "🏢", sector: "Aviation" },
+    { name: "DAMAC Properties", logo: "🏗️", sector: "Real Estate" },
+    { name: "Emaar Properties", logo: "🌟", sector: "Development" },
+    { name: "Qatar Municipality", logo: "🏛️", sector: "Government" },
+    { name: "Jumeirah Hotels", logo: "🏨", sector: "Hospitality" },
+    { name: "DP World", logo: "🚢", sector: "Logistics" },
+    { name: "Qatar Airports", logo: "✈️", sector: "Aviation" },
+    { name: "DEWA", logo: "⚡", sector: "Utilities" },
+    { name: "Qatar Health Authority", logo: "🏥", sector: "Healthcare" },
+    { name: "Nakheel Properties", logo: "🌴", sector: "Real Estate" },
+    { name: "Qatar Metro", logo: "🚇", sector: "Transportation" },
+    { name: "Mall of Emirates", logo: "🛍️", sector: "Retail" },
   ];
 
   const testimonials = [
     {
-      name: 'Ahmed Al-Rashid',
-      company: 'Emaar Properties',
-      position: 'Project Manager',
-      text: 'Paint Tech has been our trusted partner for multiple residential projects. Their attention to detail and quality of work is exceptional.',
-      rating: 5
+      name: "Ahmed Al-Rashid",
+      company: "Emaar Properties",
+      position: "Project Manager",
+      text: "Paint Tech has been our trusted partner for multiple residential projects. Their attention to detail and quality of work is exceptional.",
+      rating: 5,
     },
     {
-      name: 'Sarah Johnson',
-      company: 'Jumeirah Hotels',
-      position: 'Facilities Director',
-      text: 'Professional service with minimal disruption to our operations. The team completed the hotel renovation ahead of schedule.',
-      rating: 5
+      name: "Sarah Johnson",
+      company: "Jumeirah Hotels",
+      position: "Facilities Director",
+      text: "Professional service with minimal disruption to our operations. The team completed the hotel renovation ahead of schedule.",
+      rating: 5,
     },
     {
-      name: 'Mohammed Hassan',
-      company: 'DAMAC Properties',
-      position: 'Construction Manager',
-      text: 'Reliable, efficient, and cost-effective. Paint Tech delivers consistent quality across all our projects.',
-      rating: 5
-    }
+      name: "Mohammed Hassan",
+      company: "DAMAC Properties",
+      position: "Construction Manager",
+      text: "Reliable, efficient, and cost-effective. Paint Tech delivers consistent quality across all our projects.",
+      rating: 5,
+    },
   ];
 
   return (
@@ -53,7 +52,8 @@ const Clients = () => {
               Our Valued Clients
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Trusted by leading organizations across Dubai and the UAE for over 15 years
+              Trusted by leading organizations across Qatar and the UAE for over
+              15 years
             </p>
           </div>
         </div>
@@ -85,22 +85,37 @@ const Clients = () => {
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-gray-400 text-lg">Hear from our satisfied clients about their experience</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Hear from our satisfied clients about their experience
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-all duration-300">
+              <div
+                key={index}
+                className="bg-gray-800 p-8 rounded-xl hover:bg-gray-700 transition-all duration-300"
+              >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">⭐</span>
+                    <span key={i} className="text-yellow-400 text-xl">
+                      ⭐
+                    </span>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 leading-relaxed italic">"{testimonial.text}"</p>
+                <p className="text-gray-300 mb-6 leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
                 <div className="border-t border-gray-600 pt-4">
-                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                  <p className="text-orange-400 text-sm">{testimonial.position}</p>
+                  <h4 className="text-white font-semibold">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-orange-400 text-sm">
+                    {testimonial.position}
+                  </p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </div>
@@ -113,25 +128,61 @@ const Clients = () => {
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Industries We Serve</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industries We Serve
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: '🏢', title: 'Commercial', desc: 'Office buildings, retail spaces, shopping centers' },
-              { icon: '🏠', title: 'Residential', desc: 'Villas, apartments, residential complexes' },
-              { icon: '🏭', title: 'Industrial', desc: 'Factories, warehouses, industrial facilities' },
-              { icon: '🏨', title: 'Hospitality', desc: 'Hotels, restaurants, entertainment venues' },
-              { icon: '🏥', title: 'Healthcare', desc: 'Hospitals, clinics, medical facilities' },
-              { icon: '🏫', title: 'Education', desc: 'Schools, universities, training centers' },
-              { icon: '🏛️', title: 'Government', desc: 'Public buildings, municipal facilities' },
-              { icon: '🚗', title: 'Infrastructure', desc: 'Transportation hubs, public utilities' },
+              {
+                icon: "🏢",
+                title: "Commercial",
+                desc: "Office buildings, retail spaces, shopping centers",
+              },
+              {
+                icon: "🏠",
+                title: "Residential",
+                desc: "Villas, apartments, residential complexes",
+              },
+              {
+                icon: "🏭",
+                title: "Industrial",
+                desc: "Factories, warehouses, industrial facilities",
+              },
+              {
+                icon: "🏨",
+                title: "Hospitality",
+                desc: "Hotels, restaurants, entertainment venues",
+              },
+              {
+                icon: "🏥",
+                title: "Healthcare",
+                desc: "Hospitals, clinics, medical facilities",
+              },
+              {
+                icon: "🏫",
+                title: "Education",
+                desc: "Schools, universities, training centers",
+              },
+              {
+                icon: "🏛️",
+                title: "Government",
+                desc: "Public buildings, municipal facilities",
+              },
+              {
+                icon: "🚗",
+                title: "Infrastructure",
+                desc: "Transportation hubs, public utilities",
+              },
             ].map((sector, index) => (
               <div key={index} className="text-center group">
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {sector.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{sector.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {sector.title}
+                </h3>
                 <p className="text-gray-400 text-sm">{sector.desc}</p>
               </div>
             ))}

@@ -10,7 +10,7 @@ const Portfolio = () => {
       id: 1,
       title: "Luxury Villa Interior",
       category: "residential",
-      location: "Dubai Hills",
+      location: "Qatar Hills",
       image: "./img1.jpg",
       description:
         "Complete interior painting of a luxury villa with premium finishes",
@@ -45,7 +45,7 @@ const Portfolio = () => {
       id: 5,
       title: "Hotel Renovation",
       category: "commercial",
-      location: "Downtown Dubai",
+      location: "Downtown Qatar",
       image: "./img5.jpg",
       description: "Complete hotel interior and exterior renovation project",
     },
@@ -278,7 +278,10 @@ const Portfolio = () => {
           <div className=" w-full flex items-start justify-start">
             <ul className="w-full flex items-center justify-center flex-wrap gap-8">
               {portfolioJobs.map((job, index) => (
-                <li key={index} className="text-center flex-grow text-lg bg-gray-800 p-5 rounded-xl hover:scale-105 text-gray-400 transition-all">
+                <li
+                  key={index}
+                  className="text-center flex-grow text-lg bg-gray-800 p-5 rounded-xl hover:scale-105 text-gray-400 transition-all"
+                >
                   {job}
                 </li>
               ))}

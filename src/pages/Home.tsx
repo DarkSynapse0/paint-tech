@@ -63,7 +63,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: '15+ Years Experience', desc: 'Trusted expertise in Dubai market' },
+              { title: '15+ Years Experience', desc: 'Trusted expertise in Qatar market' },
               { title: 'Premium Materials', desc: 'Only the finest paints and coatings' },
               { title: 'Professional Team', desc: 'Skilled craftsmen and project managers' },
               { title: '24/7 Support', desc: 'Always available for your needs' },

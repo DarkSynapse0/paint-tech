@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,8 +9,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from './ui/navigation-menu';
-import { cn } from '@/lib/utils';
+} from "./ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,40 +23,82 @@ const Header = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Define sub-menu items for About and Services
   const aboutSubItems = [
-    { name: 'Our Story', href: '/about#story', description: 'Learn about our journey and history' },
-    { name: 'Mission & Vision', href: '/about#mission', description: 'Our commitment to excellence' },
-    { name: 'Our Team', href: '/about#team', description: 'Meet our skilled professionals' },
-    { name: 'Why Choose Us', href: '/about#why-choose', description: 'What sets us apart' },
+    {
+      name: "Our Story",
+      href: "/about#story",
+      description: "Learn about our journey and history",
+    },
+    {
+      name: "Mission & Vision",
+      href: "/about#mission",
+      description: "Our commitment to excellence",
+    },
+    {
+      name: "Our Team",
+      href: "/about#team",
+      description: "Meet our skilled professionals",
+    },
+    {
+      name: "Why Choose Us",
+      href: "/about#why-choose",
+      description: "What sets us apart",
+    },
   ];
 
   const servicesSubItems = [
-    { name: t('interiorPainting'), href: '/services#interior', description: 'Professional interior painting services' },
-    { name: t('exteriorPainting'), href: '/services#exterior', description: 'Weather-resistant exterior painting' },
-    { name: t('decorativePainting'), href: '/services#decorative', description: 'Artistic and decorative finishes' },
-    { name: t('industrialPainting'), href: '/services#industrial', description: 'Industrial coating solutions' },
-    { name: t('waterproofing'), href: '/services#waterproofing', description: 'Waterproofing and protection' },
-    { name: t('woodCoating'), href: '/services#wood', description: 'Wood coating and finishing' },
+    {
+      name: t("interiorPainting"),
+      href: "/services#interior",
+      description: "Professional interior painting services",
+    },
+    {
+      name: t("exteriorPainting"),
+      href: "/services#exterior",
+      description: "Weather-resistant exterior painting",
+    },
+    {
+      name: t("decorativePainting"),
+      href: "/services#decorative",
+      description: "Artistic and decorative finishes",
+    },
+    {
+      name: t("industrialPainting"),
+      href: "/services#industrial",
+      description: "Industrial coating solutions",
+    },
+    {
+      name: t("waterproofing"),
+      href: "/services#waterproofing",
+      description: "Waterproofing and protection",
+    },
+    {
+      name: t("woodCoating"),
+      href: "/services#wood",
+      description: "Wood coating and finishing",
+    },
   ];
 
   const navigation = [
-    { name: t('portfolio'), href: '/portfolio' },
-    { name: t('products'), href: '/products' },
-    { name: t('clients'), href: '/clients' },
-    { name: t('partners'), href: '/partners' },
-    { name: t('contact'), href: '/contact' },
+    { name: t("portfolio"), href: "/portfolio" },
+    { name: t("products"), href: "/products" },
+    { name: t("clients"), href: "/clients" },
+    { name: t("partners"), href: "/partners" },
+    { name: t("contact"), href: "/contact" },
   ];
 
   return (
     <header
       className={cn(
         "fixed top-0 w-full border-b border-gray-800 z-50 transition-all duration-300",
-        isScrolled ? "bg-gray-900/95 backdrop-blur-sm" : "bg-gray-900/95 backdrop-blur-sm"
+        isScrolled
+          ? "bg-gray-900/95 backdrop-blur-sm"
+          : "bg-gray-900/95 backdrop-blur-sm"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +115,9 @@ const Header = () => {
               />
               <span className="text-white font-bold text-sm"></span>
             </div>
-            <span className="font-bold text-lg text-white">Paint Tech Contracting WLL</span>
+            <span className="font-bold text-lg text-white">
+              Paint Tech Contracting WLL
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -97,7 +141,7 @@ const Header = () => {
                               About Paint Tech
                             </div>
                             <p className="text-sm leading-tight text-gray-300">
-                              15+ years of excellence in Dubai's painting
+                              15+ years of excellence in Qatar's painting
                               industry
                             </p>
                           </Link>

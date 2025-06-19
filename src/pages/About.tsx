@@ -1,6 +1,5 @@
-
 // Removed incorrect import of 'url'
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from "../contexts/LanguageContext";
 
 const About = () => {
   const { t } = useLanguage();
@@ -8,13 +7,14 @@ const About = () => {
   return (
     <div className="pt-16 min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800"
+      <section
+        className="py-20 bg-gradient-to-br from-gray-900 to-gray-800"
         style={{
           background: 'url("./img14.jpg")',
-          backgroundSize : "cover",
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ const About = () => {
               About Paint Tech Contracting
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leading painting contractors in Dubai with over 15 years of
+              Leading painting contractors in Qatar with over 15 years of
               experience in transforming spaces
             </p>
           </div>
