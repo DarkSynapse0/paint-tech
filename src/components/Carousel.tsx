@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Link } from "lucide-react";
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Carousel = () => {
@@ -80,12 +80,12 @@ const Carousel = () => {
               <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
                 {carouselData[currentSlide].description}
               </p>
-              <a
+              <Link
                 href={carouselData[currentSlide].link}
                 className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 {t('learnMore')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
