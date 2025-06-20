@@ -95,7 +95,7 @@ const Carousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-white hover:scale-110"
+        className="absolute left-6 top-[30%]  lg:top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-white hover:scale-110"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -103,7 +103,7 @@ const Carousel = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-white hover:scale-110"
+        className="absolute right-6 top-[30%] lg:top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300 text-white hover:scale-110"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

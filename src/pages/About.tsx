@@ -14,6 +14,30 @@ const About = () => {
   ];
 
 
+const team = [
+  {
+    name: "Late. Jhabindra Acharya",
+    role: "Founder",
+    image: "./Foundcer.jpeg",
+  },
+  {
+    name: "Kamal Khatri",
+    role: "Operation Manager",
+    image: "./OM.jpeg",
+  },
+  {
+    name: "Arjun Acharya",
+    role: "General Manager",
+    image: "./GM.jpeg",
+  },
+  {
+    name: "Ashish Gale",
+    role: "Managing Director",
+    image: "./MD.jpeg",
+  },
+];
+
+
   return (
     <div className="pt-16 min-h-screen">
       {/* Hero Section */}
@@ -138,6 +162,38 @@ const About = () => {
                 and stakeholders.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Team
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Meet the people behind the success of Paint Tech Contracting
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <div
+                key={index}
+                className="bg-gray-700 hover:bg-gray-600 transition-all p-6 rounded-xl text-center group"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-gray-600 mb-4"
+                />
+                <h3 className="text-white text-lg font-semibold group-hover:text-orange-400 mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-gray-400">{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

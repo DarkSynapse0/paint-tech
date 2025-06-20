@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from "react";
 
@@ -198,10 +199,10 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-6">
-                  <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
+                <div className=" w-full mt-6 flex justify-center">
+                  <Link to={"/contact"} className=" text-center w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
                     Get Quote
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
