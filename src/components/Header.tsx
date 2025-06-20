@@ -129,7 +129,7 @@ const Header = () => {
                     {t("about")}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-6 w-[400px] bg-gray-800 border border-gray-700">
+                    <div className="grid gap-3 p-6 w-[400px] bg-gray-800">
                       <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
@@ -173,7 +173,7 @@ const Header = () => {
                     {t("services")}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-6 w-[500px] lg:w-[600px] bg-gray-800 border border-gray-700">
+                    <div className="grid gap-3 p-6 w-[500px] lg:w-[600px] bg-gray-800">
                       <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
