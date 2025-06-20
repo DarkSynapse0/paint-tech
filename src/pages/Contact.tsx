@@ -209,10 +209,15 @@ const Contact = () => {
                       <h4 className="text-white font-semibold">
                         Office Address
                       </h4>
+                      <p className="text-gray-400">Zone 43,</p>
+                      <p className="text-gray-400">Street 250,</p>
+                      <p className="text-gray-400">Building 247,</p>
+                      <p className="text-gray-400">Unit 0,</p>
+                      <p className="text-gray-400">C.R.: 118750,</p>
+                      <p className="text-gray-400">P.O. Box: 2426,</p>
                       <p className="text-gray-400">
                         Qatar, United Arab Emirates
                       </p>
-                      <p className="text-gray-400">P.O. Box: XXXXX</p>
                     </div>
                   </div>
 
@@ -282,7 +287,7 @@ const Contact = () => {
                     <h4 className="text-white font-semibold">
                       Emergency Hotline
                     </h4>
-                    <p className="text-red-400 font-bold">+971 XX XXX XXXX</p>
+                    <p className="text-red-400 font-bold">40083727</p>
                   </div>
                 </div>
               </div>
