@@ -200,7 +200,10 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className=" w-full mt-6 flex justify-center">
-                  <Link to={"/contact"} className=" text-center w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105">
+                  <Link
+                    to={"/contact"}
+                    className=" text-center w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold py-3 rounded-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 transform hover:scale-105"
+                  >
                     Get Quote
                   </Link>
                 </div>
@@ -211,8 +214,8 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 flex items-center justify-center bg-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Process
           </h2>
@@ -220,76 +223,64 @@ const Services = () => {
             How we deliver exceptional results
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center items-center justify-center">
+          <div className="flex flex-col items-center gap-[10px] justify-center w-full">
             {[
               {
-                step: "01",
                 title: "Initial Consultation",
                 desc: "Initial assessment and project planning",
               },
               {
-                step: "02",
                 title: "Project Planning and Preparation",
                 desc: "Surface cleaning and preparation",
               },
               {
-                step: "03",
                 title: "Surface Preparation",
                 desc: "Inspection of surfaces and preparation for painting",
               },
               {
-                step: "04",
                 title: "Painting and Coating Application",
                 desc: "Applying primer and topcoat for finish and protection",
               },
               {
-                step: "05",
                 title: "Final Inspection and Touch-Ups",
                 desc: "Final inspection for quality and consistency",
               },
               {
-                step: "06",
                 title: "Client Walkthrough and Approval",
                 desc: "Walkthrough with client and feedback collection",
               },
               {
-                step: "07",
                 title: "Post-Project Follow-Up",
                 desc: "Feedback review and client satisfaction check",
               },
             ].map((item, index, arr) => (
-              <div key={index} className=" flex flex-col justify-center items-center relative">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex-wrap flex items-center justify-center mb-4">
-                  <span className="text-lg font-bold text-white">
-                    {item.step}
-                  </span>
+              <div
+                key={index}
+                className="w-full flex justify-start items-start gap-[20px]"
+              >
+                <div className="flex flex-col items-start justify-start">
+                  <p
+                    className={`w-[35px] h-[35px] flex items-center justify-center rounded-full text-[1rem] 
+                      bg-gray-200 text-gray-500 dark:bg-slate-700 dark:text-[#abc2d3]
+                    `}
+                  >
+                    {index + 1}
+                  </p>
+                  {index < arr.length - 1 && (
+                    <div
+                      className={`relative left-[40%] w-[2px] h-[40px] mt-[10px] bg-gray-300`}
+                    ></div>
+                  )}
                 </div>
-                <div>
 
-                <h3 className="text-white text-lg font-semibold text-center mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-center text-sm">{item.desc}</p>
+                <div className="text-left">
+                  <h1 className="text-[1.1rem] text-gray-200 dark:text-[#abc2d3]">
+                    {item.title}
+                  </h1>
+                  <p className="text-[0.9rem] text-gray-500 dark:text-[#abc2d3]/70">
+                    {item.desc}
+                  </p>
                 </div>
-
-                {/* Arrow (right) */}
-                {index < arr.length - 1 && (
-                  <div className="hidden md:block absolute right-[-24px] top-[32px]">
-                    <svg
-                      className="w-6 h-6 text-orange-400"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                )}
               </div>
             ))}
           </div>

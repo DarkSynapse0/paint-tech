@@ -21,11 +21,6 @@ const team = [
     image: "./Foundcer.jpeg",
   },
   {
-    name: "Kamal Khatri",
-    role: "Operation Manager",
-    image: "./OM.jpeg",
-  },
-  {
     name: "Arjun Acharya",
     role: "General Manager",
     image: "./GM.jpeg",
@@ -34,6 +29,11 @@ const team = [
     name: "Ashish Gale",
     role: "Managing Director",
     image: "./MD.jpeg",
+  },
+  {
+    name: "Kamal Khatri",
+    role: "Operation Manager",
+    image: "./OM.jpeg",
   },
 ];
 
