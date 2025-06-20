@@ -239,6 +239,9 @@ const Contact = () => {
                       <p className="text-gray-400">
                         painttech.contracting@gmail.com
                       </p>
+                      <p className="text-gray-400 flex items-center">
+                        painttech2022@gmail.com
+                      </p>
                     </div>
                   </div>
 
