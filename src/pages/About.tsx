@@ -1,4 +1,3 @@
-// Removed incorrect import of 'url'
 import { useLanguage } from "../contexts/LanguageContext";
 
 const About = () => {
@@ -9,34 +8,32 @@ const About = () => {
       description:
         "A dynamic company dedicated to delivering innovative solutions across various industries, including the IT sector.",
       url: "https://Synagratic.com",
-      logo: "https://synagratic.com/uploads/sitesetting/1210f08c26ef02626fcab55b15be4dd8.png", // Put the logo in public/logos/
+      logo: "https://synagratic.com/uploads/sitesetting/1210f08c26ef02626fcab55b15be4dd8.png",
     },
   ];
 
-
-const team = [
-  {
-    name: "Late. Jhabindra Acharya",
-    role: "Founder",
-    image: "./Foundcer.jpeg",
-  },
-  {
-    name: "Arjun Acharya",
-    role: "General Manager",
-    image: "./GM.jpeg",
-  },
-  {
-    name: "Ashish Gale",
-    role: "Managing Director",
-    image: "./MD.jpeg",
-  },
-  {
-    name: "Kamal Khatri",
-    role: "Operation Manager",
-    image: "./OM.jpeg",
-  },
-];
-
+  const team = [
+    {
+      name: "Late. Jhabindra Acharya",
+      role: "Founder",
+      image: "./Foundcer.jpeg",
+    },
+    {
+      name: "Arjun Acharya",
+      role: "General Manager",
+      image: "./GM.jpeg",
+    },
+    {
+      name: "Ashish Gale",
+      role: "Managing Director",
+      image: "./MD.jpeg",
+    },
+    {
+      name: "Kamal Khatri",
+      role: "Operation Manager",
+      image: "./OM.jpeg",
+    },
+  ];
 
   return (
     <div className="pt-16 min-h-screen">
@@ -71,28 +68,39 @@ const team = [
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                At Paint Tech Contracting WLL, we are driven by a relentless
-                pursuit of quality and customer satisfaction. Our commitment to
-                excellence is ingrained in every aspect of our operations, from
-                our meticulous attention to detail during the painting process
-                to our unwavering dedication to meeting and exceeding our
-                clients' expectations. We understand that each project is
-                unique, and we approach every task with the same level of
-                dedication and professionalism. Our team of skilled
-                professionals utilizes cutting-edge techniques, premium-quality
-                materials, and industry-best practices to ensure that our
-                clients receive the highest caliber of service and
-                craftsmanship. As we continue to grow and evolve, our commitment
-                to quality and customer satisfaction remains steadfast.
+                The journey of Paint Tech Contracting began in 2009, when two
+                ambitious individuals—<strong>Jhabindra Acharya</strong> and{" "}
+                <strong>Ashish Gale</strong>—first crossed paths in Doha, Qatar.
+                Jhabindra was a skilled painter working in a private
+                construction company, while Ashish served as a sales associate
+                in a multinational retail company. Their casual acquaintance
+                quickly blossomed into a strong friendship rooted in mutual
+                respect and complementary skills.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                We are constantly striving to raise the bar and set new
-                standards of excellence in the painting industry, and we are
-                grateful for the opportunity to partner with you on your
-                painting projects. Thank you for choosing Paint Tech Contracting
-                WLL as your trusted partner. We look forward to exceeding your
-                expectations and delivering outstanding results that enhance the
-                beauty, durability, and value of your properties.
+                At that time, due to legal restrictions, workers could not
+                freely transfer between companies. Despite this, the duo found a
+                way to collaborate: Jhabindra would find painting and
+                construction-related projects, while Ashish would handle the
+                client-side negotiations, communication, and administration.
+                Their unofficial collaboration led to the successful completion
+                of several projects across the city, establishing a reputation
+                for reliability and quality.
+              </p>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Recognizing the growing demand for their services and driven by
+                a shared vision, they decided to establish a formal entity. In
+                2018, <strong>Paint Tech Contracting Company WLL</strong> was
+                officially registered. From that moment forward, the team worked
+                day and night to carve a niche in Qatar’s competitive
+                construction and painting industry.
+              </p>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Their story is one of determination, teamwork, and resilience.
+                What started as a modest partnership has grown into a
+                full-fledged company known for its excellence, trustworthiness,
+                and unparalleled service in the world of painting and
+                construction.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
@@ -113,7 +121,7 @@ const team = [
               <img
                 src="./img6.jpg"
                 alt="Paint Tech Team"
-                className=" rounded-xl shadow-2xl"
+                className="rounded-xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-xl" />
             </div>
@@ -137,12 +145,9 @@ const team = [
                 painting services that exceed our clients' expectations. Through
                 our dedication to quality, integrity, and professionalism, we
                 aim to enhance the aesthetic appeal, value, and longevity of
-                every property we work on. We strive to build lasting
-                relationships with our clients based on trust, reliability, and
-                superior craftsmanship.
+                every property we work on.
               </p>
             </div>
-
             <div className="bg-gray-800 p-8 rounded-xl">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-2xl">👁️</span>
@@ -154,18 +159,14 @@ const team = [
                 set the industry standard for excellence in painting services,
                 innovation, and sustainability. By continuously investing in our
                 people, technology, and processes, we seek to achieve growth,
-                profitability, and leadership in the painting industry while
-                making a positive impact on the communities we serve."With its
-                clear mission and vision, Paint Tech Contracting is committed to
-                delivering outstanding painting services, driving innovation,
-                and fostering long-term relationships with clients, partners,
-                and stakeholders.
+                profitability, and leadership in the painting industry.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Our Team */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -176,7 +177,6 @@ const team = [
               Meet the people behind the success of Paint Tech Contracting
             </p>
           </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div
@@ -209,7 +209,6 @@ const team = [
               The principles that guide everything we do
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -247,7 +246,7 @@ const team = [
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -255,7 +254,6 @@ const team = [
               Why Choose Us?
             </h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -305,6 +303,8 @@ const team = [
           </div>
         </div>
       </section>
+
+      {/* Sister Companies */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -316,7 +316,6 @@ const team = [
               quality and professionalism.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sisterCompanies.map((company, index) => (
               <a
