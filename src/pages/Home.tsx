@@ -123,7 +123,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "15+ Years Experience",
+                title: "8+ Years Experience",
                 desc: "Trusted expertise in Qatar market",
               },
               {
@@ -203,7 +203,9 @@ const Home = () => {
                 </button>
                 <div
                   className={`px-6 pb-4 text-gray-300 transition-all duration-300 ${
-                    activeIndex === index ? "block border-t p-2 border-gray-700" : "hidden"
+                    activeIndex === index
+                      ? "block border-t p-2 border-gray-700"
+                      : "hidden"
                   }`}
                 >
                   {faq.answer}
